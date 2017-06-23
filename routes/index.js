@@ -10,8 +10,8 @@ router.get('/welcome', function(req, res, next) {
 
  res.send("abmnu");
 });
-router.get('/wel', function(req, res, next) {
-    docs.insert({firstname:"nihar",lastname:"saini",age:"21"}, function(err,docs){
+router.get('/push', function(req, res, next) {
+    docs.update({"id":"12345"},{$push:{"group":{"name":"user3"}}}, function(err,docs){
         if(err) console.log(err);
         else res.json(docs);
     })

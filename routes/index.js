@@ -16,6 +16,18 @@ router.get('/push', function(req, res, next) {
         else res.json(docs);
     })
 });
+router.get('/insert', function(req, res, next) {
+    docs.insert({"id":"1234","name":"nihar"}, function(err,docs){
+        if(err) console.log(err);
+        else res.json(docs);
+    })
+});
+router.get('/find', function(req, res, next) {
+    docs.find({}, function(err,docs){
+        if(err) console.log(err);
+        else res.json(docs);
+    })
+});
 router.get('/ni',function (reg,res,next) {
     res.send('welcome to heroku');
 

@@ -23,7 +23,7 @@ router.get('/insert', function(req, res, next) {
     })
 });
 router.get('/find', function(req, res, next) {
-    docs.find({}, function(err,docs){
+    docs.find({"id": "123456"}, function(err,docs){
         if(err) console.log(err);
         else res.json(docs);
     })

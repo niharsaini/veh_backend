@@ -25,7 +25,7 @@ router.get('/insert', function(req, res, next) {
 router.get('/find', function(req, res, next) {
     docs.find({"id": "123456"}, function(err,docs){
         if(err) console.log(err);
-        else res.json(docs);
+        else res.json(docs[0]);
     })
 });
 router.get('/ni',function (reg,res,next) {

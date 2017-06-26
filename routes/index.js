@@ -16,7 +16,7 @@ router.get('/push', function(req, res, next) {
         else res.json(docs);
     })
 });
-router.get('/insert', function(req, res, next) {
+router.post('/insert', function(req, res, next) {
     docs.insert({"id":"1234","name":"nihar"}, function(err,docs){
         if(err) console.log(err);
         else res.json(docs[0]);

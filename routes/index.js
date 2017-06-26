@@ -17,11 +17,11 @@ router.get('/push', function(req, res, next) {
     })
 });
 router.post('/insert', function(req, res, next) {
- var username=req.body.name;
- var pass=req.body.password;
+var username=req.body.name;
+var pass=req.body.password;
     docs.insert({"name":username,"password":pass}, function(err,docs){
         if(err) console.log(err);
-        else res.json(docs[0]);
+        else res.send("successful");
     })
 });
 router.get('/find', function(req, res, next) {
